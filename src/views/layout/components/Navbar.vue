@@ -21,7 +21,7 @@
               首页
             </el-dropdown-item>
           </router-link>
-          <a target="_blank" href="http://11.11.180.136/sharps/eladminqt">
+          <a target="_blank" href="https://github.com/sharpss/e8qt">
             <el-dropdown-item>
               项目地址
             </el-dropdown-item>
