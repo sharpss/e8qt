@@ -21,12 +21,15 @@
               首页
             </el-dropdown-item>
           </router-link>
-          <a target="_blank" href="https://www.baidu.com">
+          <a target="_blank" href="http://11.11.180.136/sharps/eladminqt">
             <el-dropdown-item>
               项目地址
             </el-dropdown-item>
           </a>
-          <el-dropdown-item divided>
+          <el-dropdown-item divided >
+            <password/>
+          </el-dropdown-item>
+          <el-dropdown-item>
             <span style="display:block;" @click="logout">退出登录</span>
           </el-dropdown-item>
         </el-dropdown-menu>
@@ -40,12 +43,14 @@ import { mapGetters } from 'vuex'
 import Breadcrumb from '@/components/Breadcrumb'
 import Hamburger from '@/components/Hamburger'
 import Screenfull from '@/components/Screenfull'
+import password from '@/views/system/user/module/password'
 
 export default {
   components: {
     Breadcrumb,
     Hamburger,
-    Screenfull
+    Screenfull,
+    password
   },
   computed: {
     ...mapGetters([

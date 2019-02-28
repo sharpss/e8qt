@@ -29,3 +29,10 @@ export function send(id) {
     method: 'get'
   })
 }
+
+export function updatePass(oldPassword, newPassword) {
+  return request({
+    url: 'api/updatepwd' + '?oldpass=' + oldPassword + '&pass=' + newPassword,
+    method: 'get'
+  })
+}
