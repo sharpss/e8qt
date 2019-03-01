@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-button size="mini" type="success" @click="to">编辑</el-button>
-    <el-dialog :visible.sync="dialog" :title="title" style="text-align: left" width="600px">
+    <el-dialog :visible.sync="dialog" :title="title" :before-close="cancel" style="text-align: left" width="600px">
       <el-form ref="form" :model="form" :rules="rules" size="small" label-width="80px">
         <el-form-item label="菜单图标">
           <el-popover

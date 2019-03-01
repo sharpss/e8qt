@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-button :disabled="data.id === 1" size="mini" type="success" @click="to">编辑</el-button>
-    <el-dialog :visible.sync="dialog" :title="title" style="text-align: left" width="500px">
+    <el-dialog :visible.sync="dialog" :title="title" :before-close="cancel" style="text-align: left" width="500px">
       <el-form ref="form" :model="form" :rules="rules" size="small" label-width="66px">
         <el-form ref="form" :model="form" :rules="rules" size="small" label-width="66px">
           <el-form-item label="名称" prop="name">
