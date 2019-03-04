@@ -64,7 +64,7 @@ export default {
   },
   methods: {
     beforeInit() {
-      this.url = 'api/users'
+      this.url = 'api/employees'
       this.params = { page: this.page, size: this.size }
       const query = this.query
       const type = query.type
