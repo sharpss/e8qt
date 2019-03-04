@@ -111,7 +111,7 @@ export default {
             _this.sup_this.init()
           }).catch(err => {
             this.loading = false
-            console.log(err)
+            console.log(err.response.data.message)
           })
         } else {
           this.loading = false
@@ -121,3 +121,10 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  div{
+    display: inline-block;
+    margin-right: 3px;
+  }
+</style>

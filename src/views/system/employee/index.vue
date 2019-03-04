@@ -2,20 +2,20 @@
   <div class="app-container">
     <search :query="query"/>
     <el-table v-loading="loading" :data="data" size="small" border style="width: 100%;">
-      <el-table-column prop="name" label="员工姓名"/>
+      <el-table-column prop="name" label="员工姓名" width="100px"/>
       <el-table-column prop="employeeId" label="编号"/>
-      <el-table-column prop="sex" label="性别"/>
+      <el-table-column prop="sex" label="性别" width="50px"/>
       <el-table-column prop="birthday" label="生日"/>
       <el-table-column prop="natives" label="籍贯"/>
       <el-table-column prop="education" label="学历"/>
-      <el-table-column prop="email" label="邮箱" width="130px"/>
-      <el-table-column prop="type" label="类型"/>
+      <el-table-column prop="email" label="邮箱" width="150px"/>
+      <el-table-column prop="type" label="类型" width="80px"/>
       <el-table-column prop="createTime" label="创建时间" width="135px">
         <template slot-scope="scope">
           <span>{{ time(scope.row.createTime) }}</span>
         </template>
       </el-table-column>
-      <el-table-column label="操作" align="center">
+      <el-table-column label="操作" align="center" width="150px">
         <template slot-scope="scope">
           <edit :data="scope.row" :sup_this="sup_this"/>
           <el-popover
