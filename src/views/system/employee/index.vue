@@ -8,9 +8,9 @@
       <el-table-column prop="birthday" label="生日"/>
       <el-table-column prop="natives" label="籍贯"/>
       <el-table-column prop="education" label="学历"/>
-      <el-table-column prop="email" label="邮箱"/>
+      <el-table-column prop="email" label="邮箱" width="130px"/>
       <el-table-column prop="type" label="类型"/>
-      <el-table-column prop="createTime" label="创建时间">
+      <el-table-column prop="createTime" label="创建时间" width="135px">
         <template slot-scope="scope">
           <span>{{ time(scope.row.createTime) }}</span>
         </template>
@@ -96,7 +96,6 @@ export default {
     }
   }
 }
-
 </script>
 
 <style scoped>
