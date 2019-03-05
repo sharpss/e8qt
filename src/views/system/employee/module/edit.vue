@@ -38,7 +38,7 @@
   </div>
 </template>
 <script>
-import { edit } from '@/api/user'
+import { edit } from '@/api/employee'
 export default {
   comments: {
     edit

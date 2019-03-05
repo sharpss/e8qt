@@ -39,7 +39,7 @@
 </template>
 
 <script>
-import { add } from '@/api/user'
+import { add } from '@/api/employee'
 export default {
   data() {
     return {

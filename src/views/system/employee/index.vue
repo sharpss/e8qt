@@ -45,7 +45,7 @@ import initData from '../../../mixins/initData'
 import { parseTime } from '@/utils/index'
 import edit from './module/edit'
 import search from './module/search'
-import { del } from '@/api/user'
+import { del } from '@/api/employee'
 export default {
   components: {
     edit,
