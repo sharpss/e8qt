@@ -4,12 +4,24 @@
     <el-table v-loading="loading" :data="data" size="small" border style="width: 100%;">
       <el-table-column prop="name" label="员工姓名" width="100px"/>
       <el-table-column prop="employeeId" label="编号"/>
-      <el-table-column prop="sex" label="性别" width="50px"/>
-      <el-table-column prop="birthday" label="生日"/>
+      <el-table-column label="性别" width="50px">
+        <template slot-scope="scope">
+          <span>{{ scope.row.sex ? '男':'女' }}</span>
+        </template>
+      </el-table-column>
+      <el-table-column prop="birthday" label="生日">
+        <template slot-scope="scope">
+          <span>{{ time(scope.row.birthday) }}</span>
+        </template>
+      </el-table-column>
       <el-table-column prop="natives" label="籍贯"/>
       <el-table-column prop="education" label="学历"/>
       <el-table-column prop="email" label="邮箱" width="150px"/>
-      <el-table-column prop="type" label="类型" width="80px"/>
+      <el-table-column label="类型" width="80px">
+        <template slot-scope="scope">
+          <span>{{ scope.row.type ? '管理员':'普通员工' }}</span>
+        </template>
+      </el-table-column>
       <el-table-column prop="createTime" label="创建时间" width="135px">
         <template slot-scope="scope">
           <span>{{ time(scope.row.createTime) }}</span>

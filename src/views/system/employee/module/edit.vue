@@ -79,8 +79,8 @@ export default {
     to() {
       // const _this = this
       this.form = {
-        id: this.data.id, name: this.data.name, employeeId: this.data.employeeId, sex: this.data.sex, birthday: this.data.birthday,
-        natives: this.data.natives, education: this.data.education, email: this.data.email, type: this.data.type, stat: this.data.stat
+        id: this.data.id, name: this.data.name, employeeId: this.data.employeeId, sex: this.data.sex.toString(), birthday: this.data.birthday,
+        natives: this.data.natives, education: this.data.education, email: this.data.email, type: this.data.type.toString(), stat: this.data.stat
       }
       this.dialog = true
     },
