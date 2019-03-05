@@ -40,9 +40,6 @@
 <script>
 import { edit } from '@/api/employee'
 export default {
-  comments: {
-    edit
-  },
   props: {
     data: {
       type: Object,
