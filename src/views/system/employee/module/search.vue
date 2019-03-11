@@ -5,12 +5,13 @@
       <el-option v-for="item in queryTypeOptions" :key="item.key" :label="item.display_name" :value="item.key"/>
     </el-select>
     <el-button class="filter-item" size="mini" type="primary" icon="el-icon-search" @click="toQuery">搜索</el-button>
-    <add/>
+    <add v-if="checkPermission(['ADMIN','USER_ALL','USER_CREATE'])"/>
   </div>
 </template>
 
 <script>
 import add from './add'
+import checkPermission from '@/utils/permission'
 export default {
   components: {
     add
@@ -32,6 +33,7 @@ export default {
     }
   },
   methods: {
+    checkPermission,
     toQuery() {
       this.$parent.page = 0
       this.$parent.init()

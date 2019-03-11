@@ -29,8 +29,9 @@
       </el-table-column>
       <el-table-column label="操作" align="center" width="150px">
         <template slot-scope="scope">
-          <edit :data="scope.row" :sup_this="sup_this"/>
+          <edit v-if="checkPermission(['ADMIN','USER_ALL','USER_EDIT'])" :data="scope.row" :sup_this="sup_this"/>
           <el-popover
+            v-if="checkPermission(['ADMIN','USER_ALL','USER_DELETE'])"
             v-model="scope.row.delPopover"
             placement="top"
             width="180">
@@ -58,6 +59,7 @@ import { parseTime } from '@/utils/index'
 import edit from './module/edit'
 import search from './module/search'
 import { del } from '@/api/employee'
+import checkPermission from '@/utils/permission'
 export default {
   components: {
     edit,
@@ -75,6 +77,7 @@ export default {
     })
   },
   methods: {
+    checkPermission,
     beforeInit() {
       this.url = 'api/employees'
       this.params = { page: this.page, size: this.size }
