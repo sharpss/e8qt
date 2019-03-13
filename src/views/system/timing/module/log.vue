@@ -26,7 +26,7 @@
           <el-tag :type="scope.row.isSuccess ? 'success' : 'danger'">{{ scope.row.isSuccess ? '成功' : '失败' }}</el-tag>
         </template>
       </el-table-column>
-      <el-table-column :show-overflow-tooltip="true" prop="createTime" label="创建日期">
+      <el-table-column :show-overflow-tooltip="true" prop="createTime" label="创建日期" width="135px">
         <template slot-scope="scope">
           <span>{{ parseTime(scope.row.createTime) }}</span>
         </template>
